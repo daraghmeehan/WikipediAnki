@@ -1,6 +1,8 @@
-spacy
-jupyter
-requests
-bs4
-tabulate
-pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
+beautifulsoup4=4.11.1=py310haa95532_0
+en-core-web-sm=3.0.0=pypi_0
+pandas=1.4.3=py310hd77b12b_0
+pyperclip=1.8.2=pypi_0
+python=3.10.4=hbb2ffb3_0
+requests=2.28.1=py310haa95532_0
+spacy=3.0.8=pypi_0
+tabulate=0.8.10=py310haa95532_0
