@@ -16,7 +16,9 @@ def run_wikipedianki() -> None:
 
     print("\nWelcome to WikipediAnki!")
 
-    flashcards = pd.DataFrame(columns=["Question", "Answer", "Hint", "Title", "URL"])
+    flashcards = pd.DataFrame(
+        columns=["Question", "Answer", "Hint", "is_easy", "Title", "URL"]
+    )
 
     try:
         while True:
@@ -37,7 +39,7 @@ def run_wikipedianki() -> None:
         print("Error encountered. Saving current flashcards and exiting...")
 
     # save to file
-    print("\nFinished studying. Saving flashcards to .csv")
+    print("\nFinished studying. Saving flashcards to .csv\n")
     save_flashcards_to_csv(flashcards)
 
 
@@ -83,10 +85,11 @@ def create_new_cards(wikipedia_url: str, soup: BeautifulSoup) -> pd.DataFrame:
 
     # add new cards to our collection
     new_cards = pd.DataFrame(new_cards)
+
     return new_cards
 
 
-def study_page(soup: BeautifulSoup) -> list[dict[str, str]]:
+def study_page(soup: BeautifulSoup) -> list[dict[str, any]]:
     """Using a given page's soup object, creates new flashcards of user-selected sentences, and returns a list of the new cards to add to our deck."""
 
     page_title = soup.find(
@@ -129,7 +132,7 @@ def retrieve_text(soup: BeautifulSoup) -> spacy.tokens.doc.Doc:
 
 def create_next_card(
     sents: list[spacy.tokens.span.Span], page_title: str
-) -> dict[str, str]:
+) -> dict[str, any]:
     """Given sentences of Wikipedia page, creates new card from a user-selected sentence."""
 
     sentence_substring = input(
@@ -181,10 +184,7 @@ def choose_line(sents: list[spacy.tokens.span.Span]) -> int:
     if line_number_to_learn == "b":
         return -1
     else:
-        try:
-            line_number_to_learn = int(line_number_to_learn)
-        except:
-            line_number_to_learn = -1
+        line_number_to_learn = int(line_number_to_learn)
 
     if 1 <= line_number_to_learn <= len(sents):
         return line_number_to_learn
@@ -195,7 +195,7 @@ def choose_line(sents: list[spacy.tokens.span.Span]) -> int:
 
 def create_card_from_line(
     line_to_learn: spacy.tokens.span.Span, page_title: str
-) -> dict[str, str]:
+) -> dict[str, any]:
     """The user determines what the card for the given line will look like, and the completed card is returned."""
 
     print("\nPlease choose from the words of the sentence.")
@@ -246,6 +246,8 @@ def create_card_from_line(
         print_card_preview(question, answer, hint)
 
     card = {"Question": question, "Answer": answer, "Hint": hint}
+
+    card["is_easy"] = confirm_with_user("\nFinally, is this an easy card?")
 
     print("\nSuccessfully created card.\n")
 
@@ -436,21 +438,62 @@ def save_flashcards_to_csv(flashcards: pd.core.frame.DataFrame) -> None:
 
     number_of_cards = len(flashcards.index)
     if number_of_cards == 0:
-        print("No cards created. Quitting without saving.")
+        print("No cards created. Exiting without saving.")
         return
 
+    # splitting into easy and normal difficulties
+    easy_flashcards, normal_flashcards = split_into_easy_and_normal_flashcards(
+        flashcards
+    )
+
+    # to timestamp csvs
     timestamp = time.strftime("%Y-%m-%d_%H%M%S", time.localtime())
-    file_name = f"{timestamp} - {number_of_cards} cards"
-    file_path = Path(f"./Flashcards/{file_name}.csv")
-    file_path.parent.mkdir(
-        exist_ok=True
-    )  # making the "Flashcard" directory if we don't have it
 
-    flashcards.to_csv(file_path, columns=flashcards.columns, header=False, index=False)
+    number_of_easy_cards = len(easy_flashcards.index)
+    if number_of_easy_cards > 0:
+        file_name = f"(Easy) {timestamp} - {number_of_easy_cards} cards"
+        file_path = Path(f"./Flashcards/{file_name}.csv")
+        file_path.parent.mkdir(
+            exist_ok=True
+        )  # making the "Flashcard" directory if we don't have it
 
-    print(f"\nFinished saving flashcards! Number of cards saved: {number_of_cards}.")
+        easy_flashcards.to_csv(
+            file_path, columns=easy_flashcards.columns, header=False, index=False
+        )
+
+    number_of_normal_cards = len(normal_flashcards.index)
+    if number_of_normal_cards > 0:
+        file_name = f"(Normal) {timestamp} - {number_of_normal_cards} cards"
+        file_path = Path(f"./Flashcards/{file_name}.csv")
+        file_path.parent.mkdir(
+            exist_ok=True
+        )  # making the "Flashcard" directory if we don't have it
+
+        normal_flashcards.to_csv(
+            file_path, columns=normal_flashcards.columns, header=False, index=False
+        )
+
+    print(
+        f"\nFinished saving flashcards! Number of cards saved: {number_of_cards} ({number_of_easy_cards} easy, {number_of_normal_cards} normal)."
+    )
+
+
+def split_into_easy_and_normal_flashcards(
+    flashcards: pd.core.frame.DataFrame,
+) -> tuple[pd.core.frame.DataFrame, pd.core.frame.DataFrame]:
+    """Separates flashcards into easy and normal difficulty collections."""
+
+    easy_flashcards = flashcards[flashcards["is_easy"] == True]
+    normal_flashcards = flashcards[flashcards["is_easy"] == False]
+
+    # dropping unnecessary 'is_easy' column
+    if len(easy_flashcards.index) > 0:
+        easy_flashcards.drop(["is_easy"], axis=1, inplace=True)
+    if len(normal_flashcards.index) > 0:
+        normal_flashcards.drop(["is_easy"], axis=1, inplace=True)
+
+    return easy_flashcards, normal_flashcards
 
 
 if __name__ == "__main__":
-
     run_wikipedianki()

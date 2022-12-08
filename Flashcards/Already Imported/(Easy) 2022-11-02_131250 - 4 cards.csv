@@ -1,0 +1,7 @@
+"The [1]-[1] model is the most well known algorithm for generating random scale-free networks using growth and preferential attachment mechanisms, i.e. when deciding where to establish a link, a new node prefers to attach to an existing node that already has many other connections.",1 - Barabási-Albert,,Barabási–Albert model,also called BA model,https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model
+"The [1]–[1] model is a random graph generation model that produces graphs with small-world properties, including short average path lengths and high clustering.",1 - Watts-Strogatz,,Watts–Strogatz model,,https://en.wikipedia.org/wiki/Watts%E2%80%93Strogatz_model
+"A [1] failure is a failure in a system of interconnected parts in which the failure of one or few parts leads to the failure of other parts, growing progressively as a result of positive feedback.",1 - cascading,,Cascading failure,,https://en.wikipedia.org/wiki/Cascading_failure
+A [1] path or [2] path is a path that visits each vertex of the graph exactly once.,"1 - Hamiltonian
+2 - traceable",,Hamiltonian path,"A Hamiltonian path that starts and ends at adjacent vertices can be completed by adding one more edge to form a Hamiltonian cycle, and removing any edge from a Hamiltonian cycle produces a Hamiltonian path.
+
+Determining whether such paths and cycles exist in graphs (the Hamiltonian path problem and Hamiltonian cycle problem) are NP-complete.",https://en.wikipedia.org/wiki/Hamiltonian_path

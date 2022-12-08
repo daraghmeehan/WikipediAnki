@@ -1,0 +1,5 @@
+A [1] [1] of a connected graph G is a set of vertices whose removal renders G disconnected.,1 - vertex cut,,Connectivity (graph theory),also called a separating set,https://en.wikipedia.org/wiki/Connectivity_(graph_theory)
+"In the mathematical field of graph theory, a [1] [1] (or [2]) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is every edge connects a vertex in U to one in V. Equivalently, a [1] [1] is a graph that does not contain any [3]-length cycles.","1 - bipartite graph
+2 - bigraph
+3 - odd",,Bipartite graph,"Vertex sets U and V are usually called the parts of the graph.
+The two sets U and V may be thought of as a coloring of the graph with two colors: if one colors all nodes in U blue, and all nodes in V green, each edge has endpoints of differing colors, as is required in the graph coloring problem.",https://en.wikipedia.org/wiki/Bipartite_graph

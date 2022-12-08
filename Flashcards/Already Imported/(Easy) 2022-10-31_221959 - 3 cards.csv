@@ -1,0 +1,6 @@
+"Instead of trying to construct a measure that tells us which edges are the most central to communities, the Girvan-Newman algorithm focuses on edges that are most likely ""[1]"" communities. The end result of the Girvan-Newman algorithm is a [2].","1 - between
+2 - dendrogram",,Girvan–Newman algorithm,,https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm
+"[1] is a concept in sociology describing the tendency of individuals to associate and bond with similar others, as in the proverb ""birds of a feather flock together"".",Homophily,,Homophily,,https://en.wikipedia.org/wiki/Homophily
+"[1] is a measure of the structure of networks or graphs which measures the strength of division of a network into [2] (also called groups, clusters or communities). Networks with high [1] have dense connections between the nodes within [2] but sparse connections between nodes in different [2]. [1] is often used in optimization methods for detecting community structure in networks. However, it has been shown that [1] suffers a [3] [3] and, therefore, it is unable to detect small communities.","1 - Modularity
+2 - modules
+3 - resolution limit",,Modularity (networks),"Biological networks, including animal brains, exhibit a high degree of modularity.",https://en.wikipedia.org/wiki/Modularity_(networks)

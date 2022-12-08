@@ -1,0 +1,5 @@
+"Central to the theory of random graphs is the [1]-[1] model, in which edges are chosen randomly for a fixed set of n vertices. It was introduced in two forms in 1959. In [2]'s G(n, p) form, each potential edge is chosen to be included in the graph or excluded from it, independently of the other edges, with probability p. Thus, the expected number of edges is [3], but the actual number of edges can vary randomly and all graphs have a nonzero probability of being selected. In contrast, in the G(n, M) model introduced by [4] and [4], the graph is chosen uniformly at random among all M-edge graphs; the number of edges is fixed, but the edges are not [5] of each other, because the presence of an edge in one position is negatively correlated with the presence of an edge in a different position.","1 - Erdős-Rényi
+2 - Gilbert
+3 - pn(n-1)/2
+4 - Erdős and Rényi
+5 - independent",,Edgar Gilber,,https://en.wikipedia.org/wiki/Edgar_Gilbert

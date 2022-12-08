@@ -1,0 +1,12 @@
+[1] centrality is a measure of the influence of a node in a network. It assigns relative scores to all nodes in the network based on the concept that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes. Google's PageRank and the [2] centrality are variants of it.,"1 - Eigenvector
+2 - Katz",2 - (4),Centrality,also called eigencentrality,https://en.wikipedia.org/wiki/Centrality
+"In the mathematical area of graph theory, a [1] is a subset of vertices of an undirected graph G such that every two distinct vertices in the [1] are adjacent. Equivalently, a clique of a graph G is an [2] [2] of G that is [3].","1 - clique
+2 - induced subgraph
+3 - complete",,Clique (graph theory),,https://en.wikipedia.org/wiki/Clique_(graph_theory)
+A clique of a graph G can also be defined as an induced subgraph of G that is complete. What do (1) induced subgraph and (2) complete mean?,"1 - a subset of the vertices of a graph together with all of the edges that were connecting the vertices in the original graph
+2 - every pair of distinct vertices is connected by a unique edge (only valid in 'simple' graphs, as opposed to multigraphs)",,Clique (graph theory),,https://en.wikipedia.org/wiki/Clique_(graph_theory)
+"Drawings of complete graphs, with their vertices placed on the points of a regular polygon, appeared already in the 13th century, in the work of [1] [1]. Such a drawing is sometimes referred to as a [2] [2].","1 - Ramon Llull
+2 - mystic rose",,Complete graph,,https://en.wikipedia.org/wiki/Complete_graph
+"In graph theory, what are trees and forests?","In graph theory, a tree is an undirected graph in which any two vertices are connected by exactly one path, or equivalently a connected acyclic undirected graph.
+
+A forest is an undirected graph in which any two vertices are connected by at most one path, or equivalently an acyclic undirected graph, or equivalently a disjoint union of trees.",,Tree (graph theory),,https://en.wikipedia.org/wiki/Tree_(graph_theory)
