@@ -164,7 +164,7 @@ def retrieve_text(soup: BeautifulSoup) -> str:
         ]
     )  # first and last paragraphs are usually "\n"
     text = re.sub(
-        r"(\[[0-9]+\])|(\[i+\])", "", text
+        r"(\[[0-9]+\])|(\[i+\])|(\[[a-z]\])", "", text
     )  # removing [1], [2] etc. from text
 
     return text
