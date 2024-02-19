@@ -15,6 +15,10 @@ The diagram below shows 11 potential flashcards to be extracted from the page of
 <img width="2502" alt="WA poster" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/ef892b7c-eba5-497f-98f6-ef4d08c3e17e">
 
 
+The diagram below shows some examples of my use of [this]([url](https://ankiweb.net/shared/info/1374772155)) image occlusion tool.
+
+<img width="1213" alt="WA occlusion" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/e751eee2-7a98-4739-a1e6-3023d675d57b">
+
 
 
 ## Scope of current version of the tool
