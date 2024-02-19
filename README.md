@@ -17,7 +17,8 @@ The diagram below shows 11 potential flashcards to be extracted from the page of
 
 The diagram below shows some examples of my use of [this]([url](https://ankiweb.net/shared/info/1374772155)) image occlusion tool.
 
-<img width="1213" alt="WA occlusion" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/e751eee2-7a98-4739-a1e6-3023d675d57b">
+<img width="820" alt="WA occlusion" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/dfdbac0d-6d10-4356-8b93-d1c4d0430efc">
+
 
 
 
