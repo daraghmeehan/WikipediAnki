@@ -8,9 +8,16 @@ A year or two ago, I found a paper where the authors created the [Wikiflash tool
 
 Apart from it not being available to use, the decks of flashcards it created were mediocre at best - they contained a lot of either basic facts that nearly everyone knows, or very specific information that is not of much use to learn.
 
-My goal is to create a tool which allows a user to read Wikipedia by themselves, and be able to quickly extract sentences to create custom flashcards for learning about any topic.
+My goal is creating a tool which allows a user to read Wikipedia by themselves, and be able to quickly extract information to create custom flashcards for learning about any topic.
 
-## Scope
+The diagram below shows 11 potential flashcards to be extracted from the page of Émile Zola. 
+
+<img width="2502" alt="WA poster" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/ef892b7c-eba5-497f-98f6-ef4d08c3e17e">
+
+
+
+
+## Scope of current version of the tool
 
 The program I have developed is to be run at the same time as browsing a Wikipedia page. Upon starting the program the user is asked which Wikipedia page they would like to make flashcards for.
 
