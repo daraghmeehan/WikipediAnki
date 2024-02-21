@@ -10,11 +10,15 @@ Apart from it not being available to use, the decks of flashcards it created wer
 
 My goal is creating a tool which allows a user to read Wikipedia by themselves, and be able to quickly extract information to create custom flashcards for learning about any topic.
 
-The diagram below shows 11 potential flashcards to be extracted from the page of Émile Zola. 
+The diagram below shows 11 potential flashcards to be extracted from the page of Émile Zola.
 
 <img width="2502" alt="WA poster" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/ef892b7c-eba5-497f-98f6-ef4d08c3e17e">
 
+<br>
+Other types of cards that could be useful:
+-Summarisation of paragraph(s)
 
+<br><br>
 The diagram below shows some examples of my use of [this]([url](https://ankiweb.net/shared/info/1374772155)) image occlusion tool.
 
 <img width="820" alt="WA occlusion" src="https://github.com/daraghmeehan/WikipediAnki/assets/47535504/dfdbac0d-6d10-4356-8b93-d1c4d0430efc">
